@@ -32,7 +32,7 @@ class PeminjamanFactory extends Factory
             'rakbuku_id' => rakbuku::all()->random()->id,
             'buku_id' => buku::all()->random()->id,
             'anggota_id' => anggota::all()->random()->id,
-            'tanggal_peminjaman' => $tanggal_peminjaman->format('Y-m-d'),
+            'tanggal_peminjaman' => $tanggal_peminjaman->format('Y-d'),
             'tanggal_pengembalian' => $tanggal_pengembalian->format('Y-m-d'),
             'status' => (string) fake()->randomElement($roles),
         ];
