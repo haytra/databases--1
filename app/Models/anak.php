@@ -16,4 +16,10 @@ class anak extends Model
         'bapak_id',
         'ibu_id'
     ];
+    public function ibus(){
+        return $this->belongsTo(ibu::class);
+    }
+    public function anaakKeduas(){
+        return $this->hasMany(anaakKedua::class);
+    }
 }

@@ -12,4 +12,7 @@ class kake extends Model
     protected $fillable=[
         'name'
     ];
+    public function neneks(){
+        return $this->hasMany(nenek::class);
+    }
 }

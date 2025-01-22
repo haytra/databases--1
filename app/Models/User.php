@@ -51,8 +51,6 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    function kake(){
-        return $this->belongsTo(kake::class);
-    }
+   
 
 }

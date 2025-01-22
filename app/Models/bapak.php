@@ -14,4 +14,10 @@ class bapak extends Model
         'kake_id',
         'nenek_id',
     ];
+     public function neneks(){
+        return $this->belongsTo(nenek::class);
+    }
+    public function ibus(){
+        return $this->hasMany(ibu::class);
+    }
 }

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\anak;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class ibu extends Model
 {
@@ -15,4 +16,10 @@ class ibu extends Model
         'nenek_id',
         'bapak_id',
     ];
+    public function bapaks(){
+        return $this->belongsTo(bapak::class);
+    }
+    public function anaks(){
+        return $this->hasMany( anak::class);
+    }
 }

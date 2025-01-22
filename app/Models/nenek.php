@@ -13,4 +13,10 @@ class nenek extends Model
         'name',
         'kake_id',
     ];
+    public function kakes(){
+        return $this->belongsTo(kake::class);
+    }
+    public function bapaks(){
+        return $this->hasMany(bapak::class);
+    }
 }
